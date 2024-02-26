@@ -24,10 +24,10 @@ public class MemberDAO {
 
     // 데이터 베이스에 접근할 수 있도록 도와주는 메소드
     public void getCon() {
-
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
+            System.out.println(connection);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -63,8 +63,9 @@ public class MemberDAO {
 
         try {
             getCon();
+            System.out.println(getCon());
 
-            String sql = "select * from jsp.member";
+            String sql = "select * from member";
 
             // 쿼리 실행
             pstmt = connection.prepareStatement(sql);

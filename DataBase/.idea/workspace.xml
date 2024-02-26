@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d7ab856-8fcd-4cff-8a96-baca84082679" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CookieSession/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CookieSession/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-10.1.18/conf/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-10.1.18/conf/context.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +53,16 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JSP/apache-tomcat-10.1.18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JSP/DataBase/src/main/webapp/WEB-INF&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.android.tools.idea.logcat.settings.LogcatApplicationSettingsConfigurableProvider&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c55bea99578042029ae12d5900ac477f&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -69,6 +71,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JSP\DataBase\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
   <component name="RunManager" selected="Smart Tomcat.DataBase">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.Main" />
@@ -128,10 +135,18 @@
       <workItem from="1708747932610" duration="16877000" />
       <workItem from="1708844514997" duration="403000" />
       <workItem from="1708844971678" duration="633000" />
+      <workItem from="1708852567526" duration="1241000" />
+      <workItem from="1708853821179" duration="1614000" />
+      <workItem from="1708857090112" duration="465000" />
+      <workItem from="1708859021338" duration="1568000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
