@@ -177,6 +177,106 @@ public class BoardDAO {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
 
+    public BoardBean getOneUpdateBoard(int num) {
+        BoardBean bean = new BoardBean();
+
+        try{
+            getCon();
+
+            // 데이터 가져오기
+            String sql = "select * from jsp.board where number=?";
+            pstmt = connection.prepareStatement(sql);
+
+            pstmt.setInt(1, num);
+
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                bean.setNumber(rs.getInt(1));
+                bean.setWriter(rs.getString(2));
+                bean.setEmail(rs.getString(3));
+                bean.setSubject(rs.getString(4));
+                bean.setPassword(rs.getString(5));
+                bean.setRegDate(Date.valueOf(rs.getDate(6).toString()));
+                bean.setRef(rs.getInt(7));
+                bean.setReStep(rs.getInt(8));
+                bean.setReLevel(rs.getInt(9));
+                bean.setReadCount(rs.getInt(10));
+                bean.setContent(rs.getString(11));
+            }
+
+            connection.close();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return bean;
+    }
+
+    // update 와 delete 시에도 사용할수 있다.
+    public String getPass(int num) {
+        String pass = "";
+
+        try {
+            getCon();
+
+            String sql = "select password from jsp.board where number=?";
+            pstmt = connection.prepareStatement(sql);
+
+            pstmt.setInt(1, num);
+
+            rs = pstmt.executeQuery();
+
+            if (rs.next()){
+                pass = rs.getString(1);
+            }
+
+            connection.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return pass;
+    }
+
+    public void updateBoard(BoardBean bean) {
+
+        try{
+            getCon();
+
+            String sql = "update jsp.board set subject=?, content=? where number=?";
+            pstmt = connection.prepareStatement(sql);
+
+            pstmt.setString(1, bean.getSubject());
+            pstmt.setString(2, bean.getContent());
+            pstmt.setInt(3, bean.getNumber());
+
+            pstmt.executeUpdate();
+
+            connection.close();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteBoard(int num) {
+        try {
+            getCon();
+
+            String sql = "delete from jsp.board where number=?";
+            pstmt = connection.prepareStatement(sql);
+
+            pstmt.setInt(1, num);
+
+            pstmt.executeUpdate();
+
+            connection.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
