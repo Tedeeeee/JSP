@@ -61,13 +61,16 @@ public class BoardDAO {
         }
     }
 
-    public Vector<BoardBean> getAllBoard() {
+    public Vector<BoardBean> getAllBoard(int startRow, int pageSize) {
         Vector<BoardBean> v = new Vector<>();
         getCon();
 
         try {
-            String sql = "select * from jsp.board order by ref desc, re_step";
+            String sql = "select * from jsp.board order by ref desc, re_step limit ?, ?";
             pstmt = connection.prepareStatement(sql);
+
+            pstmt.setInt(1, startRow - 1);
+            pstmt.setInt(2, pageSize);
 
             rs = pstmt.executeQuery();
 
@@ -278,5 +281,30 @@ public class BoardDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public int getAllCount() {
+
+        int count = 0;
+
+        try {
+            getCon();
+
+            String sql = "select count(*) from jsp.board";
+            pstmt = connection.prepareStatement(sql);
+
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                count = rs.getInt(1);
+            }
+
+            connection.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return count;
     }
 }
